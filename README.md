@@ -70,4 +70,38 @@ $hexString = -join ($acknowledge.ToCharArray() | ForEach-Object { [Convert]::ToS
 "Identification: $identification"
 "Hex string    : $hexString"
 ```
-Then we need to send a 2nd sequence which is <BR>01
+
+Output:
+
+```
+Data          : /KFM5\2Kaifa MA309M
+Manufacturer  : KFM
+Baud rate     : 9600
+Mode          : 2
+Identification: Kaifa MA309M
+Hex string    : 063035320D0A
+```
+
+As you can see, mode is 02, which I understand means send the initialisation string once and it will continue outputting the meter data continously.
+As that's not how the Tasmota smart metering is designed I used the hex string `063035300D0A` instead.
+
+Before using the script (see repo), go to the Tasmota console and give the following command: `SerialConfig 8E1` to set property parity and stop bits.
+
+And finally we get output!
+```
+/KFM5\2Kaifa MA309M
+<STX>F.F(00000000)
+0.0.0(000000xxxx) (meter id redacted)
+0.0.1(00xxxxxx) (value redacted)
+1.8.0(026348.8*kWh)
+1.8.1(000000.0*kWh)
+1.8.2(026348.8*kWh)
+2.8.0(009281.3*kWh)
+2.8.1(000000.0*kWh)
+2.8.2(009281.3*kWh)
+0.2.0(01.03-21)
+C.90.2(239b1249)
+0.2.1(01.02-19)
+C.91.2(7bed5b2f)
+<ETX>
+```
