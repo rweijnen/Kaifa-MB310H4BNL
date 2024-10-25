@@ -6,7 +6,7 @@ My net provider said it wasn definitely impossible to read out this meter but im
 I'll fill in some more details later the summary is that the meter exposes something called an S0 port.
 Basically this is an infrared port and it has an iron ring in the back so you can connect a magnet to it.
 
-In countries usch as Germany and Austria it's quite common to read out the S0 port.
+In countries such as Germany and Austria it's quite common to read out the S0 port.
 Good resources to learn more are the [volkzaehler wiki](https://wiki.volkszaehler.org/) and an article at [heise](https://www.heise.de/tests/Ausprobiert-Guenstiger-IR-Lesekopf-fuer-Smart-Meter-mit-Tastmota-Firmware-7065559.html).
 
 There's 2 choices of reading heads, infrared to USB but very there's also versions with WiFi which can connect with Home Assistant using MQTT.
