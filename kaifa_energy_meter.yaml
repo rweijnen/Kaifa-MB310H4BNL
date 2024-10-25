@@ -1,0 +1,87 @@
+# kaifa_energy_meter.yaml
+
+mqtt:
+  sensor:
+    - name: "Kaifa Total Energy Consumed"
+      state_topic: "tele/CTS_tasmota_SML_EF0CF1/SENSOR"
+      value_template: "{{ value_json.Kaifa.Energy_In_T }}"
+      unit_of_measurement: "kWh"
+      device_class: "energy"
+      state_class: "total_increasing"
+      icon: mdi:flash
+      unique_id: "kaifa_total_energy_consumed"
+
+    - name: "Kaifa Total Energy Produced"
+      state_topic: "tele/CTS_tasmota_SML_EF0CF1/SENSOR"
+      value_template: "{{ value_json.Kaifa.Energy_Out_T }}"
+      unit_of_measurement: "kWh"
+      device_class: "energy"
+      state_class: "total_increasing"
+      icon: mdi:flash
+      unique_id: "kaifa_total_energy_produced"
+
+    - name: "Kaifa Last Update Time"
+      state_topic: "tele/CTS_tasmota_SML_EF0CF1/SENSOR"
+      value_template: >
+        {{ as_datetime(value_json.Time ~ "+0000") }}
+      device_class: "timestamp"
+      unique_id: "kaifa_last_update_time"
+
+utility_meter:
+  kaifa_energy_consumed_daily:
+    name: "Energie afgenomen vandaag"
+    source: sensor.kaifa_total_energy_consumed
+    cycle: daily
+
+  kaifa_energy_consumed_monthly:
+    name: "Energie afgenomen deze maand"
+    source: sensor.kaifa_total_energy_consumed
+    cycle: monthly
+
+  kaifa_energy_consumed_yearly:
+    name: "Energie afgenomen dit jaar"
+    source: sensor.kaifa_total_energy_consumed
+    cycle: yearly
+
+  kaifa_energy_produced_daily:
+    name: "Energie terug geleverd vandaag"
+    source: sensor.kaifa_total_energy_produced
+    cycle: daily
+
+  kaifa_energy_produced_monthly:
+    name: "Energie terug geleverd deze maand"
+    source: sensor.kaifa_total_energy_produced
+    cycle: monthly
+
+  kaifa_energy_produced_yearly:
+    name: "Energie terug geleverd dit jaar"
+    source: sensor.kaifa_total_energy_produced
+    cycle: yearly
+
+# Grouping sensors for the Kaifa Energy Meter
+homeassistant:
+  customize:
+    group.kaifa_energy_meter:
+      name: "Kaifa Energy Meter"
+      entities:
+        - sensor.kaifa_total_energy_consumed
+        - sensor.kaifa_total_energy_produced
+        - sensor.kaifa_energy_consumed_daily
+        - sensor.kaifa_energy_consumed_monthly
+        - sensor.kaifa_energy_consumed_yearly
+        - sensor.kaifa_energy_produced_daily
+        - sensor.kaifa_energy_produced_monthly
+        - sensor.kaifa_energy_produced_yearly
+
+group:
+  kaifa_energy_meter:
+    name: "Kaifa Energy Meter"
+    entities:
+      - sensor.kaifa_total_energy_consumed
+      - sensor.kaifa_total_energy_produced
+      - sensor.kaifa_energy_consumed_daily
+      - sensor.kaifa_energy_consumed_monthly
+      - sensor.kaifa_energy_consumed_yearly
+      - sensor.kaifa_energy_produced_daily
+      - sensor.kaifa_energy_produced_monthly
+      - sensor.kaifa_energy_produced_yearly
