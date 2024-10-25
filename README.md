@@ -85,7 +85,7 @@ Hex string    : 063035320D0A
 As you can see, mode is 02, which I understand means send the initialisation string once and it will continue outputting the meter data continously.
 As that's not how the Tasmota smart metering is designed I used the hex string `063035300D0A` instead.
 
-Before using the script (see repo), go to the Tasmota console and give the following command: `SerialConfig 8E1` to set property parity and stop bits.
+Before using the [script](https://github.com/rweijnen/kaifa-mb310h4bnl/blob/main/script), go to the Tasmota console and give the following command: `SerialConfig 8E1` to set property parity and stop bits.
 
 And finally we get output!
 ```
