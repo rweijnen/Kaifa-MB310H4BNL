@@ -90,7 +90,7 @@ Before using the script (see repo), go to the Tasmota console and give the follo
 And finally we get output!
 ```
 /KFM5\2Kaifa MA309M
-<STX>F.F(00000000)
+<STX>F.F(00000000)
 0.0.0(000000xxxx) (meter id redacted)
 0.0.1(00xxxxxx) (value redacted)
 1.8.0(026348.8*kWh)
@@ -103,5 +103,5 @@ And finally we get output!
 C.90.2(239b1249)
 0.2.1(01.02-19)
 C.91.2(7bed5b2f)
-<ETX>
+<ETX>
 ```
