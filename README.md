@@ -13,7 +13,7 @@ There's 2 choices of reading heads, infrared to USB but very there's also versio
 The latter was most interesting to me as I want the data to be available in Home Assistant.
 
 In the reading head consists of a lower board with an IR LED and an IR phototransistor. Their signal is processed by a Schmitt trigger (74HC14D) and sent to the upper board via an 8-pin connector. 
-The lower board also has a micro-USB port to supply power to the read head and a 3.3V voltage regulator. The upper board houses an ESP8266, which handles the interpretation of the meter signals and the Wi-Fi connection.
+The lower board also has a micro-USB port to supply power to the read head and a 3.3V voltage regulator. The upper board houses an ESP8266, which handles the interpretation of the meter signals and the Wi-Fi connection.  
 ![Reading head internals](https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/3/5/2/9/2/6/7/IMG_7404B-0f3de2dc5c9a8327.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610)
 
 The device is often called a "Hichi" reader or simply "WiFi IR Lesekopf" and they use Tasmota Smart Meter Interface (see [here](https://tasmota.github.io/docs/Smart-Meter-Interface/#kaifa-mb310h4bde)).
