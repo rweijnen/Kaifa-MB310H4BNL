@@ -24,6 +24,10 @@ The device is often called a "Hichi" reader or simply "WiFi IR Lesekopf" and the
 
 I purchased this one from [Amazon](https://www.amazon.de/dp/B0D28ZQ28F), there's also a few to be found on ebay.
 
+Here's the reader attached to my meter:  
+
+![reader attached to meter](https://github.com/rweijnen/kaifa-mb310h4bnl/blob/main/assets/KaifaMB310H4BNL-with-WiFi-Reader.png)
+
 It took a lot of fiddling, testing and retrying I finally found the recipe:
 To start communication with the read we must send the following string:
 `/?!` followed by `<CR><LF>` or in HEX `2F3F210D0A` at 300 baud using 7E1 parity.
