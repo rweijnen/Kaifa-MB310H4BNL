@@ -113,5 +113,7 @@ C.91.2(7bed5b2f)
 <ETX>
 ```
 
-And finally, the entities card in Home Assistant:
-![Entities card in Home Assitant](https://github.com/rweijnen/kaifa-mb310h4bnl/blob/main/assets/KaifaMeterEntitiesCard.png)
+And finally, the entities card in Home Assistant:  
+
+![Home Assistant Entities Card](https://github.com/user-attachments/assets/084a2d89-157c-438f-8adb-fc55d539b61e)
+
