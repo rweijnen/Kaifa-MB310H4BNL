@@ -1,7 +1,7 @@
 **Reading Kaifa MB310H4BNL**  
 My house has a Kaifa MB310H4BNL digial power meter but although it's digital it lacks a P1 port because it's not a "smart" meter.  
 
-![Kaifa MB310H4BNL](https://github.com/user-attachments/assets/059f8348-bc6d-4875-bde0-9d973cdca54f)
+![Kaifa MB310H4BNL](https://github.com/rweijnen/kaifa-mb310h4bnl/blob/main/assets/KaifaMB310H4BNL2.png)
 
 
 My net provider said it wasn definitely impossible to read out this meter but impossible is one of my trigger words :D
