@@ -19,7 +19,7 @@ In the reading head consists of a lower board with an IR LED and an IR phototran
 The lower board also has a micro-USB port to supply power to the read head and a 3.3V voltage regulator. The upper board houses an ESP8266, which handles the interpretation of the meter signals and the Wi-Fi connection.  
   
 ![Reading head internals](https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/3/5/2/9/2/6/7/IMG_7404B-0f3de2dc5c9a8327.jpg?force_format=avif%2Cwebp%2Cjpeg&org_if_sml=1&q=85&width=610)
-
+<sub>Image credit: heise.de/sub>
 The device is often called a "Hichi" reader or simply "WiFi IR Lesekopf" and they use Tasmota Smart Meter Interface (see [here](https://tasmota.github.io/docs/Smart-Meter-Interface/#kaifa-mb310h4bde)).
 
 I purchased this one from [Amazon](https://www.amazon.de/dp/B0D28ZQ28F), there's also a few to be found on ebay.
